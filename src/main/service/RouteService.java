@@ -1,23 +1,11 @@
 package main.service;
-
-
-
-
 import main.model.Route;
 import main.repository.RouteRepository;
 import main.repository.io.JavaIORouteImpl;
-
-
 import java.util.List;
-
 
 public class RouteService {
     RouteRepository routeRepository = new JavaIORouteImpl();
-
-    public static void main(String[] args) {
-        RouteService r = new RouteService();
-        System.out.println(r.searchByRouteAndDate("Kiev", "Odessa", "15/10"));
-    }
 
     public String searchByRouteAndDate(String departure, String destination, String date) {
         List<Route> routes = routeRepository.getAll();

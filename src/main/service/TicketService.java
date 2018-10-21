@@ -18,9 +18,10 @@ ticketR.create(ticket);
 
 }
 
-    public void updateTicketStatusById(Ticket ticket){
+    public void updateTicketStatusById(Long id){
         try {
-            ticketR.update(ticket);
+
+            ticketR.update(ticketR.getById(id));
         } catch (IOException e) {
             e.printStackTrace();
         }

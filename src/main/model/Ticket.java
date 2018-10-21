@@ -19,6 +19,10 @@ private TicketStatus status;
         this.status = status;
     }
 
+    public Ticket(long id) {
+        this.id = id;
+    }
+
     public int getNumberSeats() {
         return numberSeats;
     }
