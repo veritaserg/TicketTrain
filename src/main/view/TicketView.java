@@ -25,7 +25,7 @@ public class TicketView {
                 departure = ConsoleHelper.readString();
                 ConsoleHelper.writeToConsole("Введите город прибытия :");
                 destination = ConsoleHelper.readString();
-                ConsoleHelper.writeToConsole("Введите дату отправки в формате день,месяц(через /) :");
+                ConsoleHelper.writeToConsole("Введите дату отправки в формате день,месяц(через / ) :");
                 date = ConsoleHelper.readString();
                 route = routeView.routeController.getRoute(departure, destination);
                 routeView.searchByRouteAndDate(departure, destination, date);

@@ -19,7 +19,7 @@ public class CarServise {
     public CarServise() {
         carRepository = new JavaIOCarImpl();
     }
-    public List<Car> getCarByNumber(List<Integer> carNumber) throws IOException {
+    public List<Car> getCarByNumber(List<Long> carNumber) throws IOException {
         List<Car> carAll =  carRepository.getAll();
         List<Car> cars = new ArrayList<>();
          for (int i = 0; i < carAll.size();i++){

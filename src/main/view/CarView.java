@@ -16,7 +16,7 @@ public class CarView {
 TicketView ticketView = new TicketView();
     Map<Long, List<Integer>> carAndSeats;
 
-    public void getSeatsStatusOpen(List<Integer> numberCar) {
+    public void getSeatsStatusOpen(List<Long> numberCar) {
         List<Car> cars = carController.getCarByNumber(numberCar);
 
         while (true) {
