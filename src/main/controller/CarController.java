@@ -9,9 +9,12 @@ import java.util.List;
 import java.util.Map;
 
 public class CarController {
-    CarServise carServise = new CarServise();
+    CarServise carServise;
+    public CarController(){
+        carServise = new CarServise();
+    }
 
-    public List<Car> getCarByNumber(List<Integer> carNumber){
+    public List<Car> getCarByNumber(List<Long> carNumber){
         try {
             return carServise.getCarByNumber(carNumber);
         } catch (IOException e) {
@@ -20,7 +23,7 @@ public class CarController {
         return null;
 
     }
-    public Map<Integer, List<Integer>> getSeatsStatusOpen(List<Car> cars, String type){
+    public Map<Long, List<Integer>> getSeatsStatusOpen(List<Car> cars, String type){
       return carServise.getSeatsStatusOpen(cars,type);
     }
     public void changeStatus(int carNumber,int seatNumber){

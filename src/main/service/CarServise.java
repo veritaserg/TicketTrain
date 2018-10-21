@@ -14,8 +14,11 @@ import java.util.List;
 import java.util.Map;
 
 public class CarServise {
-    CarRepository carRepository = new JavaIOCarImpl();
+    CarRepository carRepository;
 
+    public CarServise() {
+        carRepository = new JavaIOCarImpl();
+    }
     public List<Car> getCarByNumber(List<Integer> carNumber) throws IOException {
         List<Car> carAll =  carRepository.getAll();
         List<Car> cars = new ArrayList<>();

@@ -6,7 +6,7 @@ import main.model.Car;
 
 import java.util.List;
 
-public interface TrainRepository extends GenericRepository<Train, Long> {
+public interface TrainRepository extends GenericRepository<Train, String> {
     @Override
     default void save(List<Car> train) {
 
@@ -14,12 +14,12 @@ public interface TrainRepository extends GenericRepository<Train, Long> {
 
 
     @Override
-    default void delete(Long id) {
+    default void delete(String number) {
 
     }
 
     @Override
-    default Train getById(Long id) {
+    default Train getById(String number) {
         return null;
     }
 

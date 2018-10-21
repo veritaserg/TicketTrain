@@ -9,7 +9,10 @@ import main.repository.io.JavaIOTicketRepositoryImpl;
 import java.io.IOException;
 
 public class TicketService {
-TicketRepository ticketR = new JavaIOTicketRepositoryImpl();
+TicketRepository ticketR;
+public TicketService(){
+    ticketR = new JavaIOTicketRepositoryImpl();
+}
 
 public void creatTicket(Ticket ticket)
 {
