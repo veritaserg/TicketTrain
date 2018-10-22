@@ -10,10 +10,14 @@ import java.io.IOException;
 
 public class TicketView {
 
-    TicketController ticketController = new TicketController();
-    RouteView routeView = new RouteView();
+    TicketController ticketController;
+    RouteView routeView;
     CarView carView;
     static Route route;
+    public TicketView(){
+        ticketController = new TicketController();
+        routeView = new RouteView();
+    }
 
     public void searchByRoute() {
         String departure;

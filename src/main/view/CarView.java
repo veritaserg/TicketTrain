@@ -12,9 +12,13 @@ import java.util.List;
 import java.util.Map;
 
 public class CarView {
-    CarController carController = new CarController();
-TicketView ticketView = new TicketView();
+    CarController carController;
+TicketView ticketView;
     Map<Long, List<Integer>> carAndSeats;
+    public CarView(){
+        carController = new CarController();
+        ticketView = new TicketView();
+    }
 
     public void getSeatsStatusOpen(List<Long> numberCar) {
         List<Car> cars = carController.getCarByNumber(numberCar);

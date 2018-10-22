@@ -8,8 +8,9 @@ import java.util.List;
 public class TrainService {
     TrainRepository trainRepository;
         public TrainService() {
-        TrainRepository trainRepository = new JavaIOTrainImpl();
+                    trainRepository = new JavaIOTrainImpl();
     }
+
  public List<Long> getCarNumberByTrainNumber(String number) {
        Train train = trainRepository.getById(number);
            return train.getCarNamber();
