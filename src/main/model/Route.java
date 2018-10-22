@@ -3,6 +3,7 @@ package main.model;
 import java.time.LocalDateTime;
 
 import java.util.Map;
+import java.util.Objects;
 
 public class Route {
     private Long id;
@@ -38,6 +39,20 @@ public class Route {
 
     public void setLocations(Map<Location, LocalDateTime> locations) {
         this.locations = locations;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Route)) return false;
+        Route route = (Route) o;
+        return Objects.equals(getLocations(), route.getLocations());
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(getLocations());
     }
 
     @Override

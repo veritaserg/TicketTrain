@@ -12,26 +12,20 @@ public RouteService(){
     routeRepository = new JavaIORouteImpl();
 }
 
-
-    public String searchByRouteAndDate(String departure, String destination, String date) {
-        List<Route> routes = null;
-        try {
-            routes = routeRepository.getAll();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        String dateDeparture;
+    public String searchByRouteAndDate(String departure, String destination, String date) throws IOException {
+        List<Route> routes = routeRepository.getAll();
+            String dateDeparture;
         String departureRout;
         String destinationRout;
         for (Route route : routes) {
-            dateDeparture = String.valueOf(route.getLocations()).split(",")[1].substring(9, 11) +
-                    "/" + String.valueOf(route.getLocations()).split(",")[1].substring(6, 8);
-            destinationRout = String.valueOf(route.getLocations()).split(",")[0].substring(1);
-            departureRout = String.valueOf(route.getLocations()).split(",")[2].trim();
-            if (departure.equals(departureRout) && destination.equals(destinationRout) && date.equals(dateDeparture)) {
-                return route.getNumberTrain();
-            }
-
+            dateDeparture = String.valueOf(route.getLocations()).split(",")[3].substring(9, 11) +
+                    "/" + String.valueOf(route.getLocations()).split(",")[3].substring(6, 8);
+            departureRout = String.valueOf(route.getLocations()).split(",")[0].substring(1);
+            destinationRout = String.valueOf(route.getLocations()).split(",")[2].trim();
+            if (departureRout.equals(departure) && destinationRout.equals(destination)&& dateDeparture.equals(date)) {
+               return
+                       route.getNumberTrain();
+                  }
         }
         return null;
     }

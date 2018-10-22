@@ -18,8 +18,7 @@ public TrainView(){
     public void searchByTrainNumber(String numberTrain){
             List<Long> numberCar =
         trainController.getCarNumberByTrainNumber(numberTrain);
-        System.out.println(numberCar);
-carView.getSeatsStatusOpen(numberCar);
+        carView.getSeatsStatusOpen(numberCar);
 
     }
 }

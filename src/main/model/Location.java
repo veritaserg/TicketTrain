@@ -1,5 +1,7 @@
 package main.model;
 
+import java.util.Objects;
+
 public class Location {
     private Long id;
     private String name;
@@ -23,6 +25,20 @@ public class Location {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Location)) return false;
+        Location location = (Location) o;
+        return Objects.equals(getName(), location.getName());
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(getName());
     }
 
     @Override

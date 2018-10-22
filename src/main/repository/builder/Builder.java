@@ -14,9 +14,9 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class Builder {
-    static String pathRoute = "C:\\Users\\server\\IdeaProjects\\TicketTrain\\src\\main\\resource\\route.csv";
-    static String pathCar = "C:\\Users\\server\\IdeaProjects\\TicketTrain\\src\\main\\resource\\car.csv";
-    static String pathTrain ="C:\\Users\\server\\IdeaProjects\\TicketTrain\\src\\main\\resource\\train.csv";
+    static String pathRoute = "src/main/resource/route.csv";
+    static String pathCar = "src/main/resource/car.csv";
+    static String pathTrain ="src/main/resource/train.csv";
     static Path paths;
 
     public static void main(String[] args) throws IOException {

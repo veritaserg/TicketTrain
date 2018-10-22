@@ -16,10 +16,11 @@ public class TicketView {
     static Route route;
     public TicketView(){
         ticketController = new TicketController();
-        routeView = new RouteView();
+
     }
 
     public void searchByRoute() {
+        routeView = new RouteView();
         String departure;
         String destination;
         String date;
@@ -33,8 +34,7 @@ public class TicketView {
                 date = ConsoleHelper.readString();
                 route = routeView.routeController.getRoute(departure, destination);
                 routeView.searchByRouteAndDate(departure, destination, date);
-
-                break;
+break;
             } catch (IOException e) {
                 ConsoleHelper.writeToConsole("Повторите ввод.\n");
             }
