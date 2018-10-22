@@ -32,8 +32,10 @@ public class TicketView {
                 destination = ConsoleHelper.readString();
                 ConsoleHelper.writeToConsole("Введите дату отправки в формате день,месяц(через / ) :");
                 date = ConsoleHelper.readString();
-                route = routeView.routeController.getRoute(departure, destination);
+               route = routeView.routeController.getRoute(departure,destination);
+                System.out.println("qwerty");
                 routeView.searchByRouteAndDate(departure, destination, date);
+
 break;
             } catch (IOException e) {
                 ConsoleHelper.writeToConsole("Повторите ввод.\n");

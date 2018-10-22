@@ -1,1 +1,3 @@
-1,Route{id=1, locations={Kiev,=2018-10-16T06:00, Odessa,=2018-10-15T22:00}, numberTrain='345'},1,ECONOMY,1,DELETE
+1,Route{id=1, locations={Kiev,=2018-10-16T06:00, Odessa,=2018-10-15T22:00}, numberTrain='345'},1,ECONOMY,1,ACTIVE
+2,Route{id=1, locations={Kiev,=2018-10-16T06:00, Odessa,=2018-10-15T22:00}, numberTrain='345'},15,SV,1,ACTIVE
+3,Route{id=1, locations={Kiev,=2018-10-16T06:00, Odessa,=2018-10-15T22:00}, numberTrain='345'},2,COUPE,2,ACTIVE

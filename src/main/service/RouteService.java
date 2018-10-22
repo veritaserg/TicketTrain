@@ -29,13 +29,9 @@ public RouteService(){
         }
         return null;
     }
-    public Route getRoute(String departure, String destination){
-        List<Route> routes = null;
-        try {
-            routes = routeRepository.getAll();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public Route getRoute(String departure, String destination) throws IOException {
+        List<Route> routes = routeRepository.getAll();
+
 
         String departureRout;
         String destinationRout;

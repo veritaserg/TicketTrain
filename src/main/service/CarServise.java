@@ -65,7 +65,7 @@ return cars;
         try {
             List<Car> cars = carRepository.getAll();
             for (Car car : cars) {
-                if (car.getId().equals(carNumber)) {
+                if (car.getId().equals(Long.valueOf(carNumber))) {
                     for (Map.Entry<Integer, Status> seats : car.getSeats().entrySet()) {
                         if (seats.getKey().equals(seatNumber)) {
                             if (seats.getValue().equals(Status.OPEN)) {
