@@ -11,6 +11,15 @@ private int numberCar;
 private int numberSeats;
 private TicketStatus status;
 
+    public Ticket(long id, Route route, Type typeCar, int numberCar, int numberSeats, TicketStatus status) {
+        this.id = id;
+        this.route = route;
+        this.typeCar = typeCar;
+        this.numberCar = numberCar;
+        this.numberSeats = numberSeats;
+        this.status = status;
+    }
+
     public Ticket(Route route, Type typeCar, int numberCar, int numberSeats, TicketStatus status) {
         this.route = route;
         this.typeCar = typeCar;
@@ -77,6 +86,18 @@ private TicketStatus status;
     }
 
     @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", route=" + route +
+                ", typeCar=" + typeCar +
+                ", numberCar=" + numberCar +
+                ", numberSeats=" + numberSeats +
+                ", status=" + status +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Ticket)) return false;
@@ -87,7 +108,6 @@ private TicketStatus status;
 
     @Override
     public int hashCode() {
-
         return Objects.hash(getId(), getStatus());
     }
 
