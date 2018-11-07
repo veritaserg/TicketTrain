@@ -75,6 +75,7 @@ break;
             try {
                 long id = Long.parseLong(ConsoleHelper.readString());
                 ticketController.updateTicketStatusById(id);
+
                 ConsoleHelper.writeToConsole("Статус изменен");
 
 break;
