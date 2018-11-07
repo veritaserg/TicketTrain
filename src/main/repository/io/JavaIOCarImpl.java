@@ -15,7 +15,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 public class JavaIOCarImpl implements CarRepository {
-    static String pathCar = "C:\\Users\\server\\IdeaProjects\\ templates\\com\\sergeev\\TrainTicket\\src\\main\\resource\\car.csv";
+    static String pathCar = "src\\main\\resource\\car.csv";
 
 
     public void save(List<Car> cars) throws IOException {
