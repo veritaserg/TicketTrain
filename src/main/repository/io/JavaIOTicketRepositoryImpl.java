@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JavaIOTicketRepositoryImpl implements TicketRepository {
-String ticketPath = "C:\\Users\\server\\IdeaProjects\\ templates\\com\\sergeev\\TrainTicket\\src\\main\\resource\\ticket.csv";
+String ticketPath = "src\\main\\resource\\ticket.csv";
 
      public void create(Ticket ticket) {
         List<String> list = new ArrayList<>();

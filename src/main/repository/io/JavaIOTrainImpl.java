@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JavaIOTrainImpl implements TrainRepository {
-    static String pathTrain = "C:\\Users\\server\\IdeaProjects\\ templates\\com\\sergeev\\TrainTicket\\src\\main\\resource\\train.csv";
+    static String pathTrain = "src\\main\\resource\\train.csv";
 
     @Override
     public void create(Train train) {

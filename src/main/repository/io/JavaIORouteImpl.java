@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 public class JavaIORouteImpl implements RouteRepository {
-    static String pathRoute = "C:\\Users\\server\\IdeaProjects\\ templates\\com\\sergeev\\TrainTicket\\src\\main\\resource\\route.csv";
+    static String pathRoute = "src\\main\\resource\\route.csv";
 
     @Override
     public void create(Route route) {
