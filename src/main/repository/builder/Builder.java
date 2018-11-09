@@ -24,8 +24,8 @@ public class Builder {
     }
 
     public static void creatAll() throws IOException {
-//        creatCar();
-//        creatTrain();
+     creatCar();
+       creatTrain();
         creatRoute();
     }
 
